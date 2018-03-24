@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lists</title>
+</head>
+<body>
+<h1 id="Lists"></h1>
+
+ 		<script>
+ 			 //document.getElementById("list").innerHTML= Lists; 
+ 			 	var list  = [ 0, 1, 2, 3, 4 ]
+ 			 	for(var i = 0; i<= list.length- 1; i++ ){
+ 			 	document.write(list[i] + "<br>");
+
+ 			 	}
+ 		</script>
+</body>
+</html>
