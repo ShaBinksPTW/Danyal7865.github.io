@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="list_stuff">Loop output!</p>
+<script>
+random_animals = ["Zebra", "Dog", "Cat", "Tiger", "Wolf", "Lion"]
+var txt = "";
+for(var  counter=0; counter<random_animals.length; counter++){
+	//if random_animals [counter] is NOT, Tiger add to txt
+    if (random_animals[counter]== "Cat" ||random_animals[counter]== "Tiger"){
+	txt+= random_animals [counter]+  " ";
+    }
+	document.getElementById("list_stuff").innerHTML = random_animals [counter];
+
+}
+document.getElementById("list_stuff").innerHTML = txt;
+
+</script>   
+
+</body>
+</html>
