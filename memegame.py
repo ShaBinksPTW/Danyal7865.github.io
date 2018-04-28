@@ -28,4 +28,4 @@ while not crashed:
     y = y + 1 
     x2 = x2 - 1
     y2 = y2 - 1
-                                        
+                                        computer 9
