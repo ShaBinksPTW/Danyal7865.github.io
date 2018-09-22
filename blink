@@ -1,0 +1,36 @@
+int pinLED = 13;
+int pinLED2 = 12;
+int pinLED3 = 11;
+int timeDelay = 100;
+int timeDelay2 = 120;
+int timeDelay3 = 150;
+
+
+void setup() 
+{
+  // put your setup code here, to run once:
+pinMode(13,OUTPUT);
+pinMode(12, OUTPUT);
+pinMode(11, OUTPUT);
+
+
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(pinLED, HIGH);
+delay(timeDelay);
+digitalWrite(pinLED, LOW);
+delay(timeDelay);
+
+digitalWrite(pinLED2, HIGH);
+delay(timeDelay2);
+digitalWrite(pinLED2, LOW);
+delay(timeDelay2);
+
+digitalWrite(pinLED3, HIGH);
+delay(timeDelay3);
+digitalWrite(pinLED3, LOW);
+delay(timeDelay3);
+}
