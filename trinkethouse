@@ -1,0 +1,29 @@
+import setup as setup
+
+pen = setup.getPen()
+
+# Do not edit anything above this
+# Put your code below this comment
+
+pen.pu()
+pen.rt(270)
+pen.bk(190)
+pen.lt(180)
+pen.rt(90)
+pen.fd(170)
+pen.pd()
+pen.rt(180)
+pen.fd(300)
+pen.lt(90)
+pen.fd(230)
+pen.lt(45)
+pen.fd(180)
+pen.lt(45)
+pen.fd(180)
+
+# Put your code above this comment
+# Do not edit anything below this comment
+
+
+# do not delete, this checks for correctness
+print("Did you draw a house, if yes congrats, otherwise try adjusting some values")
