@@ -29,35 +29,36 @@ void setup() {
   pinMode(button, INPUT);
   // initialize random seed by noise from analog pin 0 (should be unconnected)
   randomSeed(analogRead(0));
+  digitalWrite(button, HIGH);
 }
 
 void loop() {
-  digitalWrite(8, LOW);
-  // if button is pressed - throw the dice
-     for(int i = 0; i < 6; i++) {
-   digitalWrite(leds[i], LOW);
-     }
+
   pressed = digitalRead(button);
   
   if (pressed == LOW) 
  {
     // remove previous number to LOW
-    
+      digitalWrite(8, LOW);
+  // if button is pressed - throw the dice
+     for(int i = 0; i < 6; i++) {
+   digitalWrite(leds[i], LOW);
+     }
     // get a random number in the range [1,6]
     int die = random(1,7);
     
     //write IF statements to light up the lights
     digitalWrite(leds[0], HIGH);
-    for(int i = 1; i < 6; i++) {
+    for(int i = 0; i < 7; i++) {
       if (die >= i + 1){
         digitalWrite(leds[i], HIGH);
       }
     }    
     
   }
-  else if (pressed == HIGH) {
-    for (int i = 0; i < 6; i++) {
-      digitalWrite(leds[i], LOW);
-    }
-  }
-  }
+//  else if (pressed == HIGH) {
+//    for (int i = 0; i < 6; i++) {
+//      digitalWrite(leds[i], LOW);
+//    }
+//  }
+}
