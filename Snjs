@@ -1,0 +1,54 @@
+void light(int i, int array2[],int timeDelay) {
+  digitalWrite(array2[i], HIGH);
+delay(timeDelay);
+
+}
+
+int array[7] = {13, 12, 11, 10, 9, 8, 7};
+int array2[7] = {7, 8, 9, 10, 11, 12, 13};
+int timeDelay = 50;
+int button = 2;
+int pressed;
+void setup()
+{
+Serial.begin(9600);
+
+  // put your setup code here, to run once:
+pinMode(13,OUTPUT);
+pinMode(12, OUTPUT);
+pinMode(11, OUTPUT);
+pinMode(10, OUTPUT);
+pinMode(9, OUTPUT);
+pinMode(8, OUTPUT);
+pinMode(7, OUTPUT);
+
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ digitalWrite (button, HIGH);
+for (int i = 0; i<7; i++)
+{
+light(i, array, timeDelay);
+pressed = digitalRead(button);
+if (pressed == LOW && i == 3)
+{
+  timeDelay /=1.25 ;
+  Serial.println("You Win");
+}
+
+digitalWrite(array[i], LOW);
+delay(timeDelay);
+}
+
+for (int i = 0; i<7; i++)
+{
+light(i, array2, timeDelay);
+digitalWrite(array2[i], LOW);
+delay(timeDelay);
+}
+Serial.println("you lose");
+}
+
+
